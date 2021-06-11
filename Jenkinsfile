@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    environment{
+    environment {
     dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
     }
 
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Clean') {
             steps {
-                bat 'dotnet clean'
+                echo 'dotnet clean'
             }
         }
     }
