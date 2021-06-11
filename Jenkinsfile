@@ -1,13 +1,12 @@
 pipeline {
     agent any
     environment {
-    dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
+        dotnet = 'C:\\Program Files\\dotnet\\dotnet.exe'
     }
-
     stages {
         stage('Build') {
             steps {
-                bat 'dotnet build -- configuration Release'
+                bat 'dotnet build'
             }
         }
         stage('Run') {
@@ -17,8 +16,8 @@ pipeline {
         }
         stage('Clean') {
             steps {
-                echo 'dotnet clean'
-            }
+                bat 'dotnet clean'
         }
     }
+ }
 }
