@@ -6,17 +6,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'dotnet build'
+                bat 'C:\\Program Files\\dotnet\\dotnet.exe build --configuration Release'
             }
         }
         stage('Run') {
             steps {
-                bat 'dotnet run'
+                bat 'C:\\Program Files\\dotnet\\dotnet.exe run'
             }
         }
         stage('Clean') {
             steps {
-                bat 'dotnet clean'
+                bat 'C:\\Program Files\\dotnet\\dotnet.exe clean'
         }
     }
  }
